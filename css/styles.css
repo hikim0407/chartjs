@@ -1,0 +1,153 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chart-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.chart-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.chart-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.y-axis-title {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: center;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.chart {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    height: 400px;
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.x-axis {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.x-axis-title {
+    font-size: 16px;
+    text-align: center;
+}
+
+.labels {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.label {
+    font-size: 14px;
+    text-align: center;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 5px;
+    height: 100%;
+}
+
+.bars {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.bar {
+    width: 30px;
+    margin: 2px;
+    background-color: #3498db;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.bar span {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: #fff;
+    display: none;
+}
+
+.bar:hover {
+    background-color: #2980b9;
+}
+
+.bar:hover span {
+    display: block;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    pointer-events: none;
+    transform: translate(-50%, -100%);
+    white-space: nowrap;
+}
+
+.y-axis {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0;
+    width: 20px;
+}
+
+.y-axis-label {
+    text-align: right;
+    font-size: 12px;
+}
+
+.x-axis-label {
+    text-align: center;
+    font-size: 12px;
+    width: 100%;
+}

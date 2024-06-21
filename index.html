@@ -4,22 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Bar Chart</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/chart.js"></script>
 </head>
 <body>
-    <div class="" id="container"></div>
+    <div class="" id="myChart"></div>
     <script>
-        const data = [
+        const dataInfo = [
             {"label": "GPT", "data": [65, 59, 80, 81, 56, 55, 40]},
             {"label": "Gemini", "data": [10, 20, 30, 40, 50, 60, 70]}, 
             {"label": "Clover", "data": [80, 80, 80, 80, 80, 80, 80]}, 
         ];
         const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
         
-        const options = {};
+        const options = {
+            maxValue: 100,
+            gridInterval: 10,
+        };
         const config = {
-            "data": data,
+            "dataInfo": dataInfo,
             "labels": labels,
             "chartTitle": 'Monthly Sales Data',
             "xAxisTitle": 'Months',
